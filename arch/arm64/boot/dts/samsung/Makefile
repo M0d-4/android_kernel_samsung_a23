@@ -3,6 +3,7 @@ dts-dirs += a23/a23
 endif
 
 ifeq ($(CONFIG_ARM64),y)
+dts-dirs += a23/a23
 always          := $(dtb-y)
 subdir-y        := $(dts-dirs)
 else
@@ -16,5 +17,3 @@ dtbs: $(addprefix $(obj)/../,$(dtb-y))
 endif
 
 clean-files := *.dtb *.reverse.dts *.dtbo
-
-

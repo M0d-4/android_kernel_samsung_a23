@@ -232,13 +232,13 @@ AES_ENTRY(aes_ctr_encrypt)
 	bmi		.Lctr1x
 	cmn		w6, #4			/* 32 bit overflow? */
 	bcs		.Lctr1x
-	add		w7, w6, #1
+	add w7, w6, #1
 	mov		v0.16b, v4.16b
-	add		w8, w6, #2
+	add w8, w6, #2
 	mov		v1.16b, v4.16b
-	add		w9, w6, #3
+	add w9, w6, #3
 	mov		v2.16b, v4.16b
-	rev		w7, w7
+	rev w7, w7
 	mov		v3.16b, v4.16b
 	rev		w8, w8
 	mov		v1.s[3], w7

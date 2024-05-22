@@ -1,3 +1,11 @@
+dtbo-y += a23_eur_open_w00_r09.dtbo # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
+a23_eur_open_w00_r09.dtbo-base := ../../../vendor/qcom/khaje.dtb # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
+dtbo-y += a23_eur_open_w00_r08.dtbo # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
+a23_eur_open_w00_r08.dtbo-base := ../../../vendor/qcom/khaje.dtb # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
+dtbo-y += a23_eur_open_w00_r01.dtbo # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
+a23_eur_open_w00_r01.dtbo-base := ../../../vendor/qcom/khaje.dtb # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
+dtbo-y += a23_eur_open_w00_r00.dtbo # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
+a23_eur_open_w00_r00.dtbo-base := ../../../vendor/qcom/khaje.dtb # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 # SPDX-License-Identifier: GPL-2.0
 
 ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
@@ -17,11 +25,9 @@ endef
 # KHAJE BASE DTB
 SEC_KHAJE_BASE_DTB := ../../../vendor/qcom/khaje.dtb
 
-$(eval $(call sec_dtbo_build, \
-		$(SEC_SYSTEM_UPDATE_DTBO),$(CONFIG_ARCH_KHAJE),$(SEC_KHAJE_BASE_DTB)))
+#$(eval $(call sec_dtbo_build, \
+#		$(SEC_SYSTEM_UPDATE_DTBO),$(CONFIG_ARCH_KHAJE),$(SEC_KHAJE_BASE_DTB)))
 
-always          := $(dtb-y)
-subdir-y        := $(dts-dirs)
 endif
 
 clean-files := *.dtb *.reverse.dts *.dtbo

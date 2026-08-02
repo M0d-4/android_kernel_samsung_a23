@@ -1,11 +1,3 @@
-dtbo-y += a23_eur_open_w00_r09.dtbo # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
-a23_eur_open_w00_r09.dtbo-base := ../../../vendor/qcom/khaje.dtb # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
-dtbo-y += a23_eur_open_w00_r08.dtbo # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
-a23_eur_open_w00_r08.dtbo-base := ../../../vendor/qcom/khaje.dtb # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
-dtbo-y += a23_eur_open_w00_r01.dtbo # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
-a23_eur_open_w00_r01.dtbo-base := ../../../vendor/qcom/khaje.dtb # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
-dtbo-y += a23_eur_open_w00_r00.dtbo # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
-a23_eur_open_w00_r00.dtbo-base := ../../../vendor/qcom/khaje.dtb # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 # SPDX-License-Identifier: GPL-2.0
 
 ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)

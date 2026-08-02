@@ -1615,6 +1615,9 @@ static int tfa98xx_run_calibration(struct tfa98xx *tfa98xx0)
 #if defined(TFA_DISABLE_AUTO_CAL)
 	int temp_calflag = 0;
 #endif
+#if defined(TFA_READ_REFERENCE_TEMP)
+	enum tfa98xx_error temp_ret;
+#endif
 
 	pr_info("%s: begin\n", __func__);
 
@@ -1626,8 +1629,8 @@ static int tfa98xx_run_calibration(struct tfa98xx *tfa98xx0)
 
 #if defined(TFA_READ_REFERENCE_TEMP)
 	/* EXT_TEMP */
-	ret = tfa98xx_read_reference_temp(&temp_val);
-	if (ret) {
+	temp_ret = tfa98xx_read_reference_temp(&temp_val);
+	if (temp_ret) {
 		pr_err("%s: error in reading reference temp\n",
 			__func__);
 		temp_val = DEFAULT_REF_TEMP; /* default */
